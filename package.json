@@ -2,9 +2,10 @@
   "name": "@cloud-cli/rollup-config",
   "version": "0.0.0",
   "main": "./rollup.config.mjs",
+  "type": "module",
   "scripts": {
     "build": "./node_modules/.bin/rollup -c rollup.config.mjs",
-    "test": "echo true"
+    "test": "value=$(node ./index.js) && [ $value -eq 42 ]"
   },
   "dependencies": {
     "@rollup/plugin-commonjs": "^22.0.2",
